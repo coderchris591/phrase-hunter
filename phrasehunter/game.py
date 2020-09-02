@@ -49,7 +49,7 @@ class Game():
 
     def get_guess(self):
         guess = input('\n\nGuess a letter:  ')
-        return guess
+        return guess.lower()
 
 
     def game_over(self):

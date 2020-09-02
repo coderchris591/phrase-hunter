@@ -1,4 +1,4 @@
-# Create your Phrase class logic here.
+from string import ascii_lowercase
 class Phrase():
     def __init__(self, phrase):
         self.phrase = phrase.lower()
@@ -11,7 +11,7 @@ class Phrase():
                 print('_ ', end=' ')
 
     def check_guess(self, guess):
-        allowed_chars = 'abcdefghijklmnopqrstuvwxyz'
+        allowed_chars = ascii_lowercase
         if len(guess) != 1 or guess not in allowed_chars:
             print("\n\nWhoops, that's not a valid guess.")
         elif guess in self.phrase:
